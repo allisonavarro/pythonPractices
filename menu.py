@@ -6,7 +6,7 @@ def display_menu(menu):
     for k, function in menu.items():
         print(k, function.__name__)
 
-def generadorCartones():
+def generador_de_cartones():
     print("uno")
     input("Presione Enter para continuar\n")
     system('cls')  # clears stdout
@@ -25,8 +25,10 @@ def salir():
 
 def main():
    
-    functions_names = [generadorCartones, dos, salir]
+    functions_names = [generador_de_cartones, dos, salir]
+    description_names=['1. Generador de cartones','2.Dos','3.Salir']
     menu_items = dict(enumerate(functions_names, start=1))
+    print(menu_items)
 
     while True:
         display_menu(menu_items)
