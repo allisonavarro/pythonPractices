@@ -1,8 +1,8 @@
 import random
-
-serie = 1
-#This range specify the quantity of boards
-for _ in range(3):
+def cartones(cantidad):
+ 
+ serie = 1
+ for _ in range(cantidad):
     arrays = []
     print("B  I  N  G  O")
     print("  N Serie " + str(serie))
@@ -17,8 +17,7 @@ for _ in range(3):
     arrays.append(arrayG)
     arrayO = random.sample(range(61,76), 5)
     arrays.append(arrayO)
-    for row in zip(*arrays):
-        print("{:>2} {:>2} {:>2} {:>2} {:>2}".format(*row))
     serie = serie + 1
-
+ return arrays
+#Use the function for qty of boards for my players
 
