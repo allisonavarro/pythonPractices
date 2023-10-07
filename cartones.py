@@ -3,7 +3,10 @@ import random
 def cartones(cantidad):
  
  serie = 1
+ players=[]
+ 
  for _ in range(cantidad):
+    
     arrays = []
     print("B  I  N  G  O")
     print("  N Serie " + str(serie))
@@ -19,9 +22,14 @@ def cartones(cantidad):
     arrayO = random.sample(range(61,76), 5)
     arrays.append(arrayO)
     imprimirCarton(arrays)
+    players.append('serie'+str(serie))
+    players.append(arrays)
     serie = serie + 1
 
- return arrays
+ #create a dictonary with the data of players
+ series_dict = {players[i]: players[i+1] for i in range(0,len(players),2)}
+
+ return series_dict
 
 
 def imprimirCarton(the_carton):
