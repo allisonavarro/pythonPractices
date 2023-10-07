@@ -19,6 +19,9 @@ def Generador_de_cartones():
     input("Presione Enter para comenzar\n")
    
     Comenzar(jugadores)
+    input("Presione para sacar bolitar\n")
+
+    
 
 def Comenzar(jugadores):
     num_jugador=int(input("Escriba su numero de usuario: "))
@@ -34,6 +37,8 @@ def Salir():
     system('cls')  
     print("Adios")
     sys.exit()
+
+
 
 def main():
    
