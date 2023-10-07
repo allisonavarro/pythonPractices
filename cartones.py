@@ -1,4 +1,5 @@
 import random
+#Use the function for qty of boards for my players
 def cartones(cantidad):
  
  serie = 1
@@ -17,7 +18,15 @@ def cartones(cantidad):
     arrays.append(arrayG)
     arrayO = random.sample(range(61,76), 5)
     arrays.append(arrayO)
+    imprimirCarton(arrays)
     serie = serie + 1
+
  return arrays
-#Use the function for qty of boards for my players
+
+
+def imprimirCarton(the_carton):
+ for row in zip(*the_carton):
+        print("{:>2} {:>2} {:>2} {:>2} {:>2}".format(*row))
+
+
 

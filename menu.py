@@ -1,34 +1,40 @@
 import sys
 from os import system
+from cartones import cartones,imprimirCarton 
 
 def display_menu(menu):
     
     for k, function in menu.items():
         print(k, function.__name__)
 
-def generador_de_cartones():
-    print("uno")
+def Generador_de_cartones():
+    qty_cartones=int(input("Seleccione la cantidad de cartones: "))
+
+    myCarton=cartones(qty_cartones)
+    
+
+
     input("Presione Enter para continuar\n")
-    system('cls')  # clears stdout
+    system('cls')  
 
-def dos():
-    print("dos")
-    # Simulate function output.
+def Comenzar():
+    num_jugador=int(input("Escriba su numero de usuario: "))
+    
     input("Presione Enter para continuar\n")
-    system('cls')  # clears stdout
+    system('cls')  
 
 
-def salir():
-    system('cls')  # clears stdout
+def Salir():
+    system('cls')  
     print("Adios")
     sys.exit()
 
 def main():
    
-    functions_names = [generador_de_cartones, dos, salir]
-    description_names=['1. Generador de cartones','2.Dos','3.Salir']
+    functions_names = [Generador_de_cartones, Comenzar, Salir]
+    description_names=['1. Generador de cartones','2.Comenzar juego','3.Salir']
     menu_items = dict(enumerate(functions_names, start=1))
-    print(menu_items)
+    #print(menu_items)
 
     while True:
         display_menu(menu_items)
