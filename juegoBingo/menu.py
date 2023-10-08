@@ -1,6 +1,7 @@
 import sys
 from os import system
 from cartones import cartones,imprimirCarton 
+from tombola import juego_tomb
 
 
 def display_menu(menu):
@@ -16,10 +17,10 @@ def Generador_de_cartones():
     
 
 
-    input("Presione Enter para comenzar\n")
+    input("Presione Enter para comenzar. El juego se ganara al completar una fila vertical\n")
    
     Comenzar(jugadores)
-    input("Presione para sacar bolitar\n")
+    input("Presione para jugar otra vez\n")
 
     
 
@@ -27,9 +28,13 @@ def Comenzar(jugadores):
     num_jugador=int(input("Escriba su numero de usuario: "))
     print("B  I  N  G  O")
     print("  N Serie " + str(num_jugador))
-    imprimirCarton(jugadores["serie"+str(num_jugador)])
+    carton_player=jugadores["serie"+str(num_jugador)]
+    imprimirCarton(carton_player)
     
-    input("Presione Enter para continuar\n")
+    
+    input("Presione Enter para comenzar a sacar bolitas\n")
+    juego_tomb(carton_player)
+
     system('cls')  
 
 
