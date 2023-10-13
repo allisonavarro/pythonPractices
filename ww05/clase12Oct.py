@@ -3,10 +3,14 @@ lalista.insert
 print(lalista[1]) """
 
 
-with open('archivo.txt', 'r') as f:#Read,lectura
 
-	detalle = f.read().strip()
+
+mensaje = "El resultado arrojo diferencias"
 
  
 
-print(detalle)
+with open('archivo.txt', 'w') as f:#Write,escritura
+
+	f.write(mensaje)
+
+	#detalle = f.read().strip()
