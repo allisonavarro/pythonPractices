@@ -5,7 +5,7 @@ print(lalista[1]) """
 
 
 
-mensaje = "El resultado arrojo diferencias"
+mensaje = "El resultado arrojo otra cosa"
 
  
 
